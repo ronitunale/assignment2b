@@ -35,6 +35,7 @@ pipeline {
 		stage ('copy-war') {
 		steps {
 		dir ('/mnt/GOL/game-of-life/') {
+		sh " rm -rf /mnt/server/apache-tomcat-9.0.67/webapps/gameoflife.war"
 		sh "cp /mnt/GOL/game-of-life/gameoflife.war /mnt/server/apache-tomcat-9.0.67/webapps"
 		
 		}
@@ -78,6 +79,7 @@ pipeline {
 		stage ('copy-war') {
 		steps {
 		dir ('/mnt/GOL/game-of-life/') {
+		sh " rm -rf /mnt/server/apache-tomcat-9.0.67/webapps/gameoflife.war"
 		sh "cp /mnt/GOL/game-of-life/gameoflife.war /mnt/server/apache-tomcat-9.0.67/webapps"
 		
 		}
