@@ -69,7 +69,7 @@ pipeline {
 		stage ('mvn-install') {
 		steps {
 		dir ('/mnt/GOL/game-of-life/') {
-		sh "sudo mvn clean install"
+		sh "mvn clean install"
 		sh "sudo chmod -R 777 /mnt/GOL/game-of-life "
 		
 		}
