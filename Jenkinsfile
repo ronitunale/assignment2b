@@ -25,7 +25,7 @@ pipeline {
 		stage ('mvn-install') {
 		steps {
 		dir ('/mnt/GOL/game-of-life/') {
-		sh "mvn clean install"
+		sh "mvn clean install -DskipTests"
 		sh "chmod -R 777 /mnt/GOL/game-of-life "
 		
 		}
@@ -35,7 +35,7 @@ pipeline {
 		stage ('copy-war') {
 		steps {
 		dir ('/mnt/GOL/game-of-life/') {
-		sh "cp gameoflife.war /mnt/server/apache-tomcat-9.0.67/webapps"
+		sh "cp /mnt/GOL/game-of-life/gameoflife-web/target/gameoflife.war /mnt/server/apache-tomcat-9.0.67/webapps/"
 		
 		}
 		}		
