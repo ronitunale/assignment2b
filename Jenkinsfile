@@ -36,7 +36,7 @@ pipeline {
 		steps {
 		dir ('/mnt/GOL/game-of-life/') {
 		sh " rm -rf /mnt/server/apache-tomcat-9.0.67/webapps/gameoflife.war"
-		sh "cp /mnt/GOL/game-of-life/gameoflife.war /mnt/server/apache-tomcat-9.0.67/webapps"
+		sh "cp /mnt/GOL/game-of-life/gameoflife-web/target/gameoflife.war /mnt/server/apache-tomcat-9.0.67/webapps"
 		
 		}
 		}		
@@ -80,7 +80,7 @@ pipeline {
 		steps {
 		dir ('/mnt/GOL/game-of-life/') {
 		sh " rm -rf /mnt/server/apache-tomcat-9.0.67/webapps/gameoflife.war"
-		sh "cp /mnt/GOL/game-of-life/gameoflife.war /mnt/server/apache-tomcat-9.0.67/webapps"
+		sh "cp /mnt/GOL/game-of-life/gameoflife-web/target/gameoflife.war /mnt/server/apache-tomcat-9.0.67/webapps"
 		
 		}
 		}		
