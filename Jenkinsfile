@@ -45,7 +45,7 @@ pipeline {
 		stage ('deployment-on-slave') {
 		agent {
 		node {
-			label ('172.31.46.235')
+			label ('172.31.11.161')
 		
 			}
 		
